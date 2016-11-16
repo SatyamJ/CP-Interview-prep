@@ -6,8 +6,8 @@ public class LongestNonRepeatingSubstring {
 
 	public static void main(String[] args) {
 		
-//		String str = "abcabcbb";
-		String str = "abc";
+		String str = "abcabcdbb";
+//		String str = "abc";
 		LongestNonRepeatingSubstring l = new LongestNonRepeatingSubstring();
 		System.out.println(l.findLength(str));
 	}
@@ -26,6 +26,7 @@ public class LongestNonRepeatingSubstring {
 			int currentLength = 1;
 			
 			for(int i=0; i<n-1; i++){
+				letterCount.clear();
 				char startChar = s.charAt(i);
 				letterCount.put(new Character(startChar), new Integer(1));
 				currentLength = 1;
