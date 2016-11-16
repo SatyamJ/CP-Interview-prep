@@ -60,10 +60,10 @@ public class WordCount {
 	
 	public HashMap<Integer, HashSet<String>> computeReverseMap(HashMap<String, Integer> map){
 		
-		HashMap<Integer, HashSet<String>> reverseMap = new HashMap();
+		HashMap<Integer, HashSet<String>> reverseMap = new HashMap<Integer, HashSet<String>>();
 		
 		Set<String> keySet = map.keySet();
-		Iterator itr = keySet.iterator();
+		Iterator<String> itr = keySet.iterator();
 		while(itr.hasNext()){
 			String focusKey = (String) itr.next();
 			Integer focusValue = map.get(focusKey);
@@ -72,7 +72,7 @@ public class WordCount {
 				HashSet<String> currentSet = reverseMap.get(focusValue);
 				currentSet.add(focusKey);
 			}else{
-				HashSet<String> currentSet = new HashSet();
+				HashSet<String> currentSet = new HashSet<String>();
 				currentSet.add(focusKey);
 				reverseMap.put(focusValue, currentSet);
 			}
