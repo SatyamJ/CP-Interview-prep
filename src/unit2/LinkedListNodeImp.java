@@ -26,7 +26,7 @@ public class LinkedListNodeImp<E> implements LinkedListNode<E>{
 
     /* getter/setter for the subsequent node, or null if this is the last node */
     
-    public LinkedListNode<E> getNext(){
+    public LinkedListNodeImp<E> getNext(){
     	if(this.next == null)
     		return null;
     	else
