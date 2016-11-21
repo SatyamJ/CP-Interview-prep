@@ -1,6 +1,7 @@
 package unit2;
 
 import  java.util.HashMap;
+import java.util.HashSet;
 
 public class LinkedListDuplicateRemoval {
 
@@ -55,16 +56,16 @@ public class LinkedListDuplicateRemoval {
 	}
 	
 	public void removeDuplicatesUsingBuffer(LinkedListNodeImp<Integer> ll){
-		HashMap<Integer, Boolean> buffer = new HashMap<Integer, Boolean>();
+		HashSet<Integer> buffer = new HashSet<Integer>();
 		
 		LinkedListNodeImp<Integer> focus = ll;
-		buffer.put(focus.getValue(), true);
-		
+		buffer.add(focus.getValue());
+	
 		while(focus.getNext() != null){
-			if(buffer.containsKey(focus.getNext().getValue())){
+			if(buffer.contains(focus.getNext().getValue())){
 				focus.setNext(focus.getNext().getNext());
 			}else{
-				buffer.put(focus.getNext().getValue(), true);
+				buffer.add(focus.getNext().getValue());
 				
 				if(focus.getNext() == null)
 					break;
