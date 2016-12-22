@@ -13,6 +13,8 @@ public class LongestPalindromicSubsequence {
 		String lPSubstring = l.findLongestPalindromicSubstring(str);
 		
 		System.out.println(lPSubstring + " is longest panlindromic substring of " + str);
+		
+		sc.close();
 	}
 	
 	public String findLongestPalindromicSubstring(String input){
@@ -20,8 +22,8 @@ public class LongestPalindromicSubsequence {
 		int n = input.length();
 		int end = n-1;
 		
-		StringBuffer substring = new StringBuffer(input.substring(0, 1));
-		StringBuffer longest = new StringBuffer(input.substring(0, 1));;
+//		StringBuffer substring = new StringBuffer(input.substring(0, 1));
+		StringBuffer longest = new StringBuffer(input.substring(0, 1));
 		
 		for(int i=0; i<n-1; i++){
 			start = i;

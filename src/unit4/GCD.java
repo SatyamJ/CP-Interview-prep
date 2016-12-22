@@ -58,6 +58,7 @@ public class GCD {
 			input = console.nextInt();
 		}
 		
+		console.close();
 		return input;
 	}
 
