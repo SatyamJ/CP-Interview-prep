@@ -52,9 +52,9 @@ public class NestedArrayToIndexedMap {
 	}
 
 	public void print(HashMap<int[], Object> map){
-		Iterator itr = map.entrySet().iterator();
+		Iterator<Map.Entry<int[], Object>> itr = map.entrySet().iterator();
 		while(itr.hasNext()){
-			Map.Entry entry = (Map.Entry) itr.next();
+			Map.Entry<int[], Object> entry = itr.next();
 			int[] indices = (int[])entry.getKey();
 			
 			if(indices.length > 0){
